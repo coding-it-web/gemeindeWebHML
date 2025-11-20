@@ -1,0 +1,148 @@
+/* ===== Общий фон и центрирование ===== */
+
+body {
+  margin: 0;
+  background-color: #1d1e22; /* тёмная страница #1d1e22; */
+}
+
+.center-box {
+  height: 100vh;
+  display: flex;
+  justify-content: center;   /* по горизонтали по центру */
+  align-items: flex-start;   /* по вертикали к верху */
+  padding-top: 15vh;         /* отступ сверху ≈ 15% высоты окна */
+}
+
+/* ===== Контейнер креста ===== */
+
+.cross {
+  position: relative;
+  width: 220px;  /* общий размер по ширине */
+  height: 260px; /* общий размер по высоте (крест вытянут вниз) */
+}
+
+/* ===== Базовые настройки "лучей" креста ===== */
+
+.arm {
+  position: absolute;
+}
+
+/* --- ВЕРТИКАЛЬНЫЙ луч (форма всего креста по вертикали) --- */
+.arm.vertical {
+  /* внешний размер светящегося контура */
+  width: 85px;
+  height: 610px;
+
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 18px;
+}
+
+/* --- ГОРИЗОНТАЛЬНЫЙ луч --- */
+/* Перекладина выше середины -> верх короче, низ длиннее */
+.arm.horizontal {
+  width: 394px;
+  height: 86px;
+
+  top: 100px;        /* было 110px — подняли вверх */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 18px;
+}
+
+/* ===== ВНУТРЕННИЙ КРЕСТ (маска, чтобы свет не заходил внутрь) ===== */
+
+.arm.inner {
+  background: #292a2e;   /* цвет внутренней части креста #292a2e; */ 
+  z-index: 5;
+}
+
+/* 
+   GAP между светящимся контуром и маской был 9px,
+   теперь делаем 8px -> внутренняя маска стала
+   на 1px шире во все стороны.
+*/
+
+/* ВЕРТИКАЛЬНАЯ внутренняя часть */
+.arm.vertical.inner {
+  width: 78px;      /* было 52px */
+  height: 605px;    /* было 242px */
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5px;         /* было 9px */
+  border-radius: 14px;
+}
+
+/* ГОРИЗОНТАЛЬНАЯ внутренняя часть */
+.arm.horizontal.inner {
+  width: 390px;     /* было 202px */
+  height: 78px;     /* было 52px */
+  top: 105px;        /*: 70(top glow) + 8(gap); раньше 119 */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 14px;
+}
+
+/* ===== СВЕТЯЩИЙСЯ КОНТУР ===== */
+
+.arm.glow {
+  z-index: 0;
+}
+
+/* рамка + "свечение" под ней */
+.animated-border-box,
+.animated-border-box-glow {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+/* мягкое внешнее свечение */
+.animated-border-box-glow {
+  filter: blur(20px);
+}
+
+/* большой конический градиент, который крутится */
+.animated-border-box::before,
+.animated-border-box-glow::before {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9999px;
+  height: 9999px;
+  transform: translate(-50%, -50%) rotate(0deg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  /* цвет свечения */
+  background-image: conic-gradient(
+    rgba(0, 0, 0, 0),
+    #1976ed,
+    rgba(0, 0, 0, 0) 25%
+  );
+
+  animation: rotate 4s linear infinite;
+}
+
+/* внутренний тёмный прямоугольник внутри светящегося бордера */
+.animated-border-box::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 5px;
+  top: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background: #292a2e; /* #292a2e; */
+  border-radius: calc(18px - 3px);
+}
+
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
