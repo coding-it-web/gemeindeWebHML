@@ -1,3 +1,21 @@
+/* Уменьшаем крест на мобильных устройствах */
+@media (max-width: 600px) {
+    .cross {
+        transform: scale(0.75); /* 15% меньше */
+        transform-origin: top center;
+        margin-top: 20px;      /* немного опустить */
+    }
+
+    .site-title {
+        font-size: 16px;
+    }
+
+    .site-subtitle {
+        margin-top: 220px !important;  /* было 400px → теперь адаптировано */
+        font-size: 20px;
+    }
+}
+
 body {
   margin: 0;
   background-color: #1d1e22; /*  #1d1e22; */
