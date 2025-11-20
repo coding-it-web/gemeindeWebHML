@@ -1,35 +1,43 @@
-/* ===== Общий фон и центрирование ===== */
-
 body {
   margin: 0;
-  background-color: #1d1e22; /* тёмная страница #1d1e22; */
+  background-color: #1d1e22; /*  #1d1e22; */
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .center-box {
   height: 100vh;
   display: flex;
-  justify-content: center;   /* по горизонтали по центру */
-  align-items: flex-start;   /* по вертикали к верху */
-  padding-top: 15vh;         /* отступ сверху ≈ 15% высоты окна */
+  flex-direction: column; 
+  justify-content: flex-start;
+  align-items: center; 
+  padding-top: 5vh;   
 }
 
-/* ===== Контейнер креста ===== */
+.site-title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;   
+}
+
+.site-subtitle {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 400px; 
+}
 
 .cross {
   position: relative;
-  width: 220px;  /* общий размер по ширине */
-  height: 260px; /* общий размер по высоте (крест вытянут вниз) */
+  width: 220px;  
+  height: 260px; 
 }
-
-/* ===== Базовые настройки "лучей" креста ===== */
 
 .arm {
   position: absolute;
 }
 
-/* --- ВЕРТИКАЛЬНЫЙ луч (форма всего креста по вертикали) --- */
 .arm.vertical {
-  /* внешний размер светящегося контура */
   width: 85px;
   height: 610px;
 
@@ -38,58 +46,43 @@ body {
   border-radius: 18px;
 }
 
-/* --- ГОРИЗОНТАЛЬНЫЙ луч --- */
-/* Перекладина выше середины -> верх короче, низ длиннее */
 .arm.horizontal {
   width: 394px;
   height: 86px;
 
-  top: 100px;        /* было 110px — подняли вверх */
+  top: 100px;  
   left: 50%;
   transform: translateX(-50%);
   border-radius: 18px;
 }
 
-/* ===== ВНУТРЕННИЙ КРЕСТ (маска, чтобы свет не заходил внутрь) ===== */
-
 .arm.inner {
-  background: #292a2e;   /* цвет внутренней части креста #292a2e; */ 
+  background: #292a2e;   /*  #292a2e; */ 
   z-index: 5;
 }
 
-/* 
-   GAP между светящимся контуром и маской был 9px,
-   теперь делаем 8px -> внутренняя маска стала
-   на 1px шире во все стороны.
-*/
-
-/* ВЕРТИКАЛЬНАЯ внутренняя часть */
 .arm.vertical.inner {
-  width: 78px;      /* было 52px */
-  height: 605px;    /* было 242px */
+  width: 78px;  
+  height: 605px; 
   left: 50%;
   transform: translateX(-50%);
-  top: 5px;         /* было 9px */
+  top: 5px;  
   border-radius: 14px;
 }
 
-/* ГОРИЗОНТАЛЬНАЯ внутренняя часть */
 .arm.horizontal.inner {
-  width: 390px;     /* было 202px */
-  height: 78px;     /* было 52px */
-  top: 105px;        /*: 70(top glow) + 8(gap); раньше 119 */
+  width: 390px;  
+  height: 78px;  
+  top: 105px;   
   left: 50%;
   transform: translateX(-50%);
   border-radius: 14px;
 }
-
-/* ===== СВЕТЯЩИЙСЯ КОНТУР ===== */
 
 .arm.glow {
   z-index: 0;
 }
 
-/* рамка + "свечение" под ней */
 .animated-border-box,
 .animated-border-box-glow {
   position: absolute;
@@ -99,12 +92,10 @@ body {
   border-radius: inherit;
 }
 
-/* мягкое внешнее свечение */
 .animated-border-box-glow {
   filter: blur(20px);
 }
 
-/* большой конический градиент, который крутится */
 .animated-border-box::before,
 .animated-border-box-glow::before {
   content: "";
@@ -118,7 +109,6 @@ body {
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  /* цвет свечения */
   background-image: conic-gradient(
     rgba(0, 0, 0, 0),
     #1976ed,
@@ -128,7 +118,6 @@ body {
   animation: rotate 4s linear infinite;
 }
 
-/* внутренний тёмный прямоугольник внутри светящегося бордера */
 .animated-border-box::after {
   content: "";
   position: absolute;
