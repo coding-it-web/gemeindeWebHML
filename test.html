@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Церковь Открытых Сердец — Новости, служения, видеоблог</title>
+
+    <!-- Базовое SEO -->
+    <meta name="description"
+          content="Официальный сайт церкви Открытых Сердец: богослужения, новости, служения, календарь событий, видеоблог и контакты.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow">
+
+    <!-- Канонический адрес: ПОТОМ заменить на настоящий домен -->
+    <link rel="canonical" href="https://example.com/">
+
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Церковь Открытых Сердец">
+    <meta property="og:description"
+          content="Добро пожаловать на сайт церкви Открытых Сердец. Узнайте о служениях, новостях и жизни общины.">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:image" content="https://example.com/img/slide1.jpg">
+
+    <!-- Можно позже добавить JSON-LD schema.org (Organization / Church) -->
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <!-- МУЛЬТИМЕДИЙНЫЙ БЛОК / КАРУСЕЛЬ -->
+    <section class="hero-slider" id="hero">
+        <!-- СЛАЙД 1 -->
+        <article class="hero-slide is-active" data-slide="0" aria-label="Библейский стих 1">
+            <picture>
+                <source srcset="img/slide1.webp" type="image/webp">
+                <img src="img/slide1.jpg"
+                     width="1920" height="1080"
+                     alt="Библия и хлеб на столе"
+                     loading="eager">
+            </picture>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <!-- НАВИГАЦИЯ НА ПОЛУПРОЗРАЧНОМ СЛОЕ -->
+                <nav class="main-nav" aria-label="Главная навигация">
+                    <ul class="nav-links nav-left">
+                        <li><a href="index.html" class="nav-link is-active">Главная</a></li>
+                        <li><a href="about.html" class="nav-link">О церкви</a></li>
+                        <li><a href="news.html" class="nav-link">Новости</a></li>
+                        <li><a href="services.html" class="nav-link">Служения</a></li>
+                    </ul>
+
+                    <a href="index.html" class="nav-logo" aria-label="Церковь Открытых Сердец">
+                        <img src="img/logo.svg" alt="Логотип церкви" class="nav-logo-img">
+                        <span class="nav-logo-text">Церковь Открытых Сердец</span>
+                        <span class="nav-logo-subtitle">Евангельская христианская община</span>
+                    </a>
+
+                    <ul class="nav-links nav-right">
+                        <li><a href="calendar.html" class="nav-link">Календарь</a></li>
+                        <li><a href="video.html" class="nav-link">Видеоблог</a></li>
+                        <li><a href="blog.html" class="nav-link">Блог</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                    </ul>
+
+                    <!-- Мобильное меню (бургер) -->
+                    <button class="nav-toggle"
+                            type="button"
+                            aria-label="Открыть меню"
+                            aria-expanded="false">
+                        <span class="nav-toggle-line"></span>
+                        <span class="nav-toggle-line"></span>
+                        <span class="nav-toggle-line"></span>
+                    </button>
+                </nav>
+
+                <!-- ТЕКСТ СТИХА / ДЕВИЗА -->
+                <div class="hero-text">
+                    <h1 class="hero-title">Церковь Открытых Сердец</h1>
+                    <p class="hero-verse">
+                        «На веки, Господи, слово Твоё утверждено на небесах»
+                    </p>
+                    <p class="hero-verse-ref">
+                        Псалтирь 118:89
+                    </p>
+                </div>
+            </div>
+
+            <!-- ТОЧКИ-КНОПКИ ПЕРЕКЛЮЧЕНИЯ -->
+            <div class="hero-dots" aria-label="Переключение слайдов">
+                <button class="hero-dot is-active"
+                        type="button"
+                        data-slide="0"
+                        aria-label="Первый слайд"></button>
+                <button class="hero-dot"
+                        type="button"
+                        data-slide="1"
+                        aria-label="Второй слайд"></button>
+                <button class="hero-dot"
+                        type="button"
+                        data-slide="2"
+                        aria-label="Третий слайд"></button>
+            </div>
+        </article>
+
+        <!-- СЛАЙД 2 -->
+        <article class="hero-slide" data-slide="1" aria-label="Библейский стих 2">
+            <picture>
+                <source srcset="img/slide2.webp" type="image/webp">
+                <img src="img/slide2.jpg"
+                     width="1920" height="1080"
+                     alt="Люди молятся в церкви"
+                     loading="lazy">
+            </picture>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <!-- Тот же nav, чтобы поверх был единый хедер -->
+                <!-- Чтобы не дублировать HTML, позже можно вынести меню отдельно через шаблон.
+                     Сейчас оставляем пустой div, меню берём с первого слайда. -->
+                <div class="hero-nav-placeholder"></div>
+
+                <div class="hero-text">
+                    <h1 class="hero-title">Добро пожаловать домой</h1>
+                    <p class="hero-verse">
+                        «Где двое или трое собраны во имя Моё, там Я посреди них»
+                    </p>
+                    <p class="hero-verse-ref">
+                        Евангелие от Матфея 18:20
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <!-- СЛАЙД 3 -->
+        <article class="hero-slide" data-slide="2" aria-label="Библейский стих 3">
+            <picture>
+                <source srcset="img/slide3.webp" type="image/webp">
+                <img src="img/slide3.jpg"
+                     width="1920" height="1080"
+                     alt="Прославление в церкви"
+                     loading="lazy">
+            </picture>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-nav-placeholder"></div>
+
+                <div class="hero-text">
+                    <h1 class="hero-title">Живая вера — живая община</h1>
+                    <p class="hero-verse">
+                        «И будем внимательны друг к другу, поощряя к любви и добрым делам»
+                    </p>
+                    <p class="hero-verse-ref">
+                        Послание к Евреям 10:24
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
+</header>
+
+<main>
+    <!-- Следующий блок после скролла вниз — Новости и события -->
+    <section id="news" class="section section-news">
+        <div class="container">
+            <p class="section-kicker">Жизнь нашей общины</p>
+            <h2 class="section-title">Новости и события</h2>
+
+            <!-- Пока заглушка. Позже тут будут карточки новостей. -->
+            <p class="section-placeholder">
+                Здесь будут отображаться актуальные новости, объявления и события церкви.
+            </p>
+        </div>
+    </section>
+</main>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
