@@ -14,8 +14,17 @@ const i18n = {
         "logo.subtitle": "Evangelische christliche Gemeinde",
 
         "hero.title": "Gemeinde THOMAS",
+
         "hero.verse": "„In Ewigkeit, HERR, steht dein Wort fest im Himmel.“",
-        "hero.verseRef": "Psalm 119,89"
+        "hero.verseRef": "Psalm 119,89",
+
+        "hero.title2": "Willkommen daheim!",
+        "hero.verse2": "«Wo zwei oder drei in meinem Namen versammelt sind, da bin ich mitten unter ihnen»",
+        "hero.verseRef2": "Matt 18:20",
+
+        "hero.title3": "Lebendiger Glaube — lebendige Gemeinschaft",
+        "hero.verse3": "«Und lasst uns aufeinander Acht geben, damit wir uns gegenseitig anspornen zur Liebe und zu guten Werken»",
+        "hero.verseRef3": "Псалтирь 118:89"
     },
     ru: {
         "nav.home": "Главная",
@@ -31,7 +40,16 @@ const i18n = {
         "logo.subtitle": "Евангельская христианская община",
 
         "hero.title": "Церковь THOMAS",
+
         "hero.verse": "«На веки, Господи, слово Твоё утверждено на небесах»",
-        "hero.verseRef": "Псалтирь 118:89"
+        "hero.verseRef": "Псалтирь 118:89",
+
+        "hero.title2": "Добро пожаловать домой",
+        "hero.verse2": "«Где двое или трое собраны во имя Моё, там Я посреди них»",
+        "hero.verseRef2": "Евангелие от Матфея 18:20",
+
+        "hero.title3": "Живая вера — живая община",
+        "hero.verse3": "«И будем внимательны друг к другу, поощряя к любви и добрым делам»",
+        "hero.verseRef3": "Послание к Евреям 10:24"
     }
 };

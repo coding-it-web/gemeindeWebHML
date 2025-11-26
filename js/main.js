@@ -80,7 +80,6 @@ function setupCarousel() {
             clearInterval(timerId);
         }
         timerId = setInterval(() => {
-            // здесь было +0, поэтому слайды не листались
             goToSlide(currentIndex + 1); //test
         }, SLIDE_INTERVAL_MS);
     }
