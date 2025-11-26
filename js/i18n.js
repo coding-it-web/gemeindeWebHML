@@ -24,7 +24,7 @@ const i18n = {
 
         "hero.title3": "Lebendiger Glaube — lebendige Gemeinschaft",
         "hero.verse3": "«Und lasst uns aufeinander Acht geben, damit wir uns gegenseitig anspornen zur Liebe und zu guten Werken»",
-        "hero.verseRef3": "Псалтирь 118:89"
+        "hero.verseRef3": "Heb 10:24"
     },
     ru: {
         "nav.home": "Главная",
