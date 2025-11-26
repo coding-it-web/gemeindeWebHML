@@ -71,8 +71,12 @@ ul {
     pointer-events: auto;
 }
 
-.hero-slide picture,
-.hero-slide img {
+.hero-slide > picture {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide > picture > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -149,6 +153,7 @@ ul {
 .nav-logo-img {
     height: 48px;
     margin-bottom: 0.35rem;
+    filter: brightness(0) invert(1);
 }
 
 .nav-logo-text {
@@ -185,6 +190,72 @@ ul {
     height: 2px;
     background-color: #ffffff;
 }
+
+/* ===== ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА ===== */
+
+.lang-switcher {
+    position: absolute;
+    right: 1.5rem;
+    top: 0.8rem;
+    z-index: 4;
+    font-size: 0.7rem;
+}
+
+.lang-current {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.15rem 0.3rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.35);
+    color: #ffffff;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.lang-current-icon {
+    font-size: 0.6rem;
+    transform: translateY(1px);
+}
+
+.lang-options {
+    position: absolute;
+    right: 0;
+    margin-top: 0.25rem;
+    padding: 0.25rem 0;
+    list-style: none;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: none;
+    min-width: 3.2rem;
+}
+
+.lang-switcher.is-open .lang-options {
+    display: block;
+}
+
+.lang-option {
+    width: 100%;
+    padding: 0.2rem 0.75rem;
+    background: transparent;
+    border: none;
+    text-align: left;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.7rem;
+    white-space: nowrap;
+}
+
+.lang-option:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.lang-option.is-active {
+    font-weight: 600;
+}
+
 
 /* ===== ТЕКСТ СТИХА / АНИМАЦИЯ ===== */
 
@@ -303,13 +374,11 @@ ul {
 
 /* ===== АДАПТИВ (mobile-first) ===== */
 
-@media (max-width: 768px) {
-    .hero-content {
-        padding: 0.75rem 1rem 2.5rem;
-    }
-
+/* Планшеты и телефоны: используем бургер-меню */
+@media (max-width: 1024px) {
     .main-nav {
         justify-content: space-between;
+        padding-right: 3.5rem; /* место под переключатель языка + бургер */
     }
 
     .nav-logo {
@@ -335,7 +404,22 @@ ul {
     }
 
     .nav-toggle {
-        display: flex; /* на мобильных показываем бургер */
+        display: flex; /* показываем бургер на планшете и телефоне */
+    }
+
+    /* Переключатель языка рядом с бургером,
+       но не впритык к самому краю */
+    .lang-switcher {
+        position: absolute;
+        right: 5.5rem;
+        top: 0.6rem;
+    }
+}
+
+/* Совсем узкие экраны — дополнительно уменьшаем текст и отступы */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 0.75rem 1rem 2.5rem;
     }
 
     .hero-title {
@@ -349,6 +433,24 @@ ul {
     .hero-dots {
         left: auto;
         right: 0.9rem;
+    }
+
+    /* На очень узком экране можно чуть опустить переключатель языка,
+       если он конфликтует с бургером */
+    .lang-switcher {
+        top: 3.3rem;
+        right: 1rem;
+    }
+}
+
+/* Настоящий десктоп: полноценное меню слева/по центру/справа */
+@media (min-width: 1025px) {
+    .nav-left {
+        margin-right: 2rem;
+    }
+
+    .nav-right {
+        margin-left: 2rem;
     }
 }
 

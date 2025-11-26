@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Церковь Открытых Сердец — Новости, служения, видеоблог</title>
+    <title>Церковь THOMAS — Новости, служения, видеоблог</title> <!-- TODO -->
 
     <!-- Базовое SEO -->
     <meta name="description"
-          content="Официальный сайт церкви Открытых Сердец: богослужения, новости, служения, календарь событий, видеоблог и контакты.">
+          content="Официальный сайт церкви THOMAS: богослужения, новости, служения, календарь событий, видеоблог и контакты."> <!-- TODO -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index,follow">
 
     <!-- Канонический адрес: ПОТОМ заменить на настоящий домен -->
-    <link rel="canonical" href="https://example.com/">
+    <link rel="canonical" href="https://example.com/"> <!-- TODO -->
 
     <!-- Open Graph для соцсетей -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Церковь Открытых Сердец">
+    <meta property="og:title" content="Церковь THOMAS"> <!-- TODO -->
     <meta property="og:description"
-          content="Добро пожаловать на сайт церкви Открытых Сердец. Узнайте о служениях, новостях и жизни общины.">
+          content="Добро пожаловать на сайт церкви THOMAS. Узнайте о служениях, новостях и жизни общины."> <!-- TODO -->
     <meta property="og:url" content="https://example.com/">
     <meta property="og:image" content="https://example.com/img/slide1.jpg">
 
@@ -31,44 +31,76 @@
     <!-- МУЛЬТИМЕДИЙНЫЙ БЛОК / КАРУСЕЛЬ -->
     <section class="hero-slider" id="hero">
         <!-- СЛАЙД 1 -->
-        <article class="hero-slide is-active" data-slide="0" aria-label="Библейский стих 1">
+        <article class="hero-slide is-active" data-slide="0" aria-label="Библейский стих 1"> <!-- TODO -->
             <picture>
                 <source srcset="img/slide1.webp" type="image/webp">
                 <img src="img/slide1.jpg"
                      width="1920" height="1080"
-                     alt="Библия и хлеб на столе"
-                     loading="eager">
+                     alt="Библия и хлеб на столе" 
+                     loading="eager"> <!-- TODO -->
             </picture>
 
             <div class="hero-overlay"></div>
 
             <div class="hero-content">
                 <!-- НАВИГАЦИЯ НА ПОЛУПРОЗРАЧНОМ СЛОЕ -->
-                <nav class="main-nav" aria-label="Главная навигация">
+                <nav class="main-nav" aria-label="Hauptnavigation">
                     <ul class="nav-links nav-left">
-                        <li><a href="index.html" class="nav-link is-active">Главная</a></li>
-                        <li><a href="about.html" class="nav-link">О церкви</a></li>
-                        <li><a href="news.html" class="nav-link">Новости</a></li>
-                        <li><a href="services.html" class="nav-link">Служения</a></li>
+                        <li><a href="index.html" class="nav-link is-active" data-i18n="nav.home">Startseite</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.about">Über die Gemeinde</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.news">Nachrichten</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.services">Dienste</a></li>
                     </ul>
 
-                    <a href="index.html" class="nav-logo" aria-label="Церковь Открытых Сердец">
-                        <img src="img/logo.svg" alt="Логотип церкви" class="nav-logo-img">
-                        <span class="nav-logo-text">Церковь Открытых Сердец</span>
-                        <span class="nav-logo-subtitle">Евангельская христианская община</span>
+                    <a href="index.html" class="nav-logo" aria-label="Gemeinde THOMAS"> <!-- TODO -->
+                        <img src="img/logo.svg" alt="Gemeindelogo" class="nav-logo-img">
+                        <span class="nav-logo-text" data-i18n="logo.title">Gemeinde THOMAS</span>
+                        <span class="nav-logo-subtitle" data-i18n="logo.subtitle">Evangelische christliche Gemeinde</span>
                     </a>
 
                     <ul class="nav-links nav-right">
-                        <li><a href="calendar.html" class="nav-link">Календарь</a></li>
-                        <li><a href="video.html" class="nav-link">Видеоблог</a></li>
-                        <li><a href="blog.html" class="nav-link">Блог</a></li>
-                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.calendar">Kalender</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.video">Videoblog</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.blog">Blog</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.contacts">Kontakt</a></li>
                     </ul>
+
+                    <!-- Переключатель языка (выпадающий список) -->
+                    <div class="lang-switcher" aria-label="Sprachauswahl">
+                        <button class="lang-current"
+                                type="button"
+                                aria-haspopup="listbox"
+                                aria-expanded="false">
+                            <span class="lang-current-label">DE</span>
+                            <span class="lang-current-icon">▾</span>
+                        </button>
+
+                        <ul class="lang-options" role="listbox">
+                            <li>
+                                <button type="button"
+                                        class="lang-option is-active"
+                                        data-lang-switch="de"
+                                        role="option"
+                                        aria-selected="true">
+                                    DE
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button"
+                                        class="lang-option"
+                                        data-lang-switch="ru"
+                                        role="option"
+                                        aria-selected="false">
+                                    RU
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
                     <!-- Мобильное меню (бургер) -->
                     <button class="nav-toggle"
                             type="button"
-                            aria-label="Открыть меню"
+                            aria-label="Menü öffnen"
                             aria-expanded="false">
                         <span class="nav-toggle-line"></span>
                         <span class="nav-toggle-line"></span>
@@ -78,41 +110,41 @@
 
                 <!-- ТЕКСТ СТИХА / ДЕВИЗА -->
                 <div class="hero-text">
-                    <h1 class="hero-title">Церковь Открытых Сердец</h1>
-                    <p class="hero-verse">
+                    <h1 class="hero-title" data-i18n="hero.title">Церковь THOMAS</h1> <!-- TODO -->
+                    <p class="hero-verse" data-i18n="hero.verse">
                         «На веки, Господи, слово Твоё утверждено на небесах»
-                    </p>
-                    <p class="hero-verse-ref">
+                    </p> <!-- TODO -->
+                    <p class="hero-verse-ref" data-i18n="hero.verseRef">
                         Псалтирь 118:89
-                    </p>
+                    </p> <!-- TODO -->
                 </div>
             </div>
 
             <!-- ТОЧКИ-КНОПКИ ПЕРЕКЛЮЧЕНИЯ -->
-            <div class="hero-dots" aria-label="Переключение слайдов">
+            <div class="hero-dots" aria-label="Переключение слайдов"> <!-- TODO -->
                 <button class="hero-dot is-active"
                         type="button"
                         data-slide="0"
-                        aria-label="Первый слайд"></button>
+                        aria-label="Первый слайд"></button> <!-- TODO -->
                 <button class="hero-dot"
                         type="button"
                         data-slide="1"
-                        aria-label="Второй слайд"></button>
+                        aria-label="Второй слайд"></button> <!-- TODO -->
                 <button class="hero-dot"
                         type="button"
                         data-slide="2"
-                        aria-label="Третий слайд"></button>
+                        aria-label="Третий слайд"></button> <!-- TODO -->
             </div>
         </article>
 
         <!-- СЛАЙД 2 -->
-        <article class="hero-slide" data-slide="1" aria-label="Библейский стих 2">
+        <article class="hero-slide" data-slide="1" aria-label="Библейский стих 2"> <!-- TODO -->
             <picture>
                 <source srcset="img/slide2.webp" type="image/webp">
                 <img src="img/slide2.jpg"
                      width="1920" height="1080"
                      alt="Люди молятся в церкви"
-                     loading="lazy">
+                     loading="lazy"> <!-- TODO -->
             </picture>
             <div class="hero-overlay"></div>
             <div class="hero-content">
@@ -122,38 +154,38 @@
                 <div class="hero-nav-placeholder"></div>
 
                 <div class="hero-text">
-                    <h1 class="hero-title">Добро пожаловать домой</h1>
+                    <h1 class="hero-title">Добро пожаловать домой</h1> <!-- TODO -->
                     <p class="hero-verse">
                         «Где двое или трое собраны во имя Моё, там Я посреди них»
-                    </p>
+                    </p> <!-- TODO -->
                     <p class="hero-verse-ref">
                         Евангелие от Матфея 18:20
-                    </p>
+                    </p> <!-- TODO -->
                 </div>
             </div>
         </article>
 
         <!-- СЛАЙД 3 -->
-        <article class="hero-slide" data-slide="2" aria-label="Библейский стих 3">
+        <article class="hero-slide" data-slide="2" aria-label="Библейский стих 3"> <!-- TODO -->
             <picture>
                 <source srcset="img/slide3.webp" type="image/webp">
                 <img src="img/slide3.jpg"
                      width="1920" height="1080"
                      alt="Прославление в церкви"
-                     loading="lazy">
+                     loading="lazy"> <!-- TODO -->
             </picture>
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <div class="hero-nav-placeholder"></div>
 
                 <div class="hero-text">
-                    <h1 class="hero-title">Живая вера — живая община</h1>
+                    <h1 class="hero-title">Живая вера — живая община</h1> <!-- TODO -->
                     <p class="hero-verse">
                         «И будем внимательны друг к другу, поощряя к любви и добрым делам»
-                    </p>
+                    </p> <!-- TODO -->
                     <p class="hero-verse-ref">
                         Послание к Евреям 10:24
-                    </p>
+                    </p> <!-- TODO -->
                 </div>
             </div>
         </article>
@@ -164,17 +196,18 @@
     <!-- Следующий блок после скролла вниз — Новости и события -->
     <section id="news" class="section section-news">
         <div class="container">
-            <p class="section-kicker">Жизнь нашей общины</p>
-            <h2 class="section-title">Новости и события</h2>
+            <p class="section-kicker">Жизнь нашей общины</p> <!-- TODO -->
+            <h2 class="section-title">Новости и события</h2> <!-- TODO -->
 
             <!-- Пока заглушка. Позже тут будут карточки новостей. -->
             <p class="section-placeholder">
                 Здесь будут отображаться актуальные новости, объявления и события церкви.
-            </p>
+            </p> <!-- TODO -->
         </div>
     </section>
 </main>
 
 <script src="js/main.js" defer></script>
+<script src="js/i18n.js" defer></script>
 </body>
 </html>
