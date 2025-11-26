@@ -102,9 +102,29 @@ function setupMobileMenu() {
 
     if (!nav || !navToggle) return;
 
+    const closeMenu = () => {
+        if (nav.classList.contains("is-open")) {
+            nav.classList.remove("is-open");
+            navToggle.setAttribute("aria-expanded", "false");
+        }
+    };
+
     navToggle.addEventListener("click", () => {
         const isOpen = nav.classList.toggle("is-open");
         navToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            closeMenu();
+        });
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!nav.contains(event.target)) {
+            closeMenu();
+        }
     });
 }
 
