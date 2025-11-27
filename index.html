@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Церковь THOMAS — Новости, служения, видеоблог</title> <!-- TODO -->
+    <title>Gemeinde Jesus lebt — Новости, служения, видеоблог</title> <!-- TODO -->
 
     <!-- Базовое SEO -->
     <meta name="description"
@@ -15,7 +15,7 @@
 
     <!-- Open Graph для соцсетей -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Церковь THOMAS"> <!-- TODO -->
+    <meta property="og:title" content="Gemeinde Jesus lebt">
     <meta property="og:description"
           content="Добро пожаловать на сайт церкви THOMAS. Узнайте о служениях, новостях и жизни общины."> <!-- TODO -->
     <meta property="og:url" content="https://example.com/">
@@ -39,17 +39,17 @@
                         <li><a href="#" class="nav-link" data-i18n="nav.services">Dienste</a></li>
                     </ul>
 
-                    <a href="index.html" class="nav-logo" aria-label="Gemeinde THOMAS"> <!-- TODO -->
+                    <a href="index.html" class="nav-logo" aria-label="Gemeinde Jesus lebt">
                         <img src="img/logo.svg" alt="Gemeindelogo" class="nav-logo-img">
-                        <span class="nav-logo-text" data-i18n="logo.title">Gemeinde THOMAS</span>
-                        <span class="nav-logo-subtitle" data-i18n="logo.subtitle">Evangelische christliche Gemeinde</span>
+                        <span class="nav-logo-text" data-i18n="logo.title">Gemeinde Jesus lebt</span>
+                        <span class="nav-logo-subtitle" data-i18n="logo.subtitle">Freievangelische Gemeinde</span>
                     </a>
 
                     <ul class="nav-links nav-right">
                         <li><a href="#" class="nav-link" data-i18n="nav.calendar">Kalender</a></li>
                         <li><a href="#" class="nav-link" data-i18n="nav.video">Videoblog</a></li>
                         <li><a href="#" class="nav-link" data-i18n="nav.blog">Blog</a></li>
-                        <li><a href="#" class="nav-link" data-i18n="nav.contacts">Kontakt</a></li>
+                        <li><a href="#contact" class="nav-link" data-i18n="nav.contacts">Kontakt</a></li>
                     </ul>
 
                     <!-- Переключатель языка (выпадающий список) -->
@@ -112,7 +112,7 @@
         </div>
 
         <!-- СЛАЙД 1 -->
-        <article class="hero-slide is-active" data-slide="0" aria-label="Библейский стих 1"> <!-- TODO -->
+        <article class="hero-slide is-active" data-slide="0" aria-label="Biblischer Vers 1">
             <picture>
                 <source srcset="img/slide1.webp" type="image/webp">
                 <img src="img/slide1.jpg"
@@ -126,7 +126,7 @@
             <div class="hero-content">
                 <!-- ТЕКСТ СТИХА / ДЕВИЗА -->
                 <div class="hero-text">
-                    <h1 class="hero-title" data-i18n="hero.title">Gemeinde THOMAS</h1>
+                    <h1 class="hero-title" data-i18n="hero.title">Gemeinde Jesus lebt</h1>
                     <p class="hero-verse" data-i18n="hero.verse">
                         «In Ewigkeit, HERR, steht dein Wort fest im Himmel.»
                     </p>
@@ -138,7 +138,7 @@
         </article>
 
         <!-- СЛАЙД 2 -->
-        <article class="hero-slide" data-slide="1" aria-label="Библейский стих 2"> <!-- TODO -->
+        <article class="hero-slide" data-slide="1" aria-label="Biblischer Vers 2">
             <picture>
                 <source srcset="img/slide2.webp" type="image/webp">
                 <img src="img/slide2.jpg"
@@ -163,7 +163,7 @@
         </article>
 
         <!-- СЛАЙД 3 -->
-        <article class="hero-slide" data-slide="2" aria-label="Библейский стих 3"> <!-- TODO -->
+        <article class="hero-slide" data-slide="2" aria-label="Biblischer Vers 3">
             <picture>
                 <source srcset="img/slide3.webp" type="image/webp">
                 <img src="img/slide3.jpg"
@@ -193,13 +193,64 @@
     <!-- Следующий блок после скролла вниз — Новости и события -->
     <section id="news" class="section section-news">
         <div class="container">
-            <p class="section-kicker">Жизнь нашей общины</p> <!-- TODO -->
-            <h2 class="section-title">Новости и события</h2> <!-- TODO -->
+            <p class="section-kicker" data-i18n="news.kicker">Unser Leben
+            </p>
+            <h2 class="section-title" data-i18n="news.title">Neuigkeiten und Ereignisse</h2>
 
             <!-- Пока заглушка. Позже тут будут карточки новостей. -->
             <p class="section-placeholder">
                 Здесь будут отображаться актуальные новости, объявления и события церкви.
             </p> <!-- TODO -->
+        </div>
+    </section>
+        <!-- БЛОК "НАШ ДОМ МОЛИТВЫ / АДРЕС" -->
+    <section id="location" class="section section-location">
+        <div class="section-location-bg">
+            <div class="container">
+                <div class="location-card">
+                    <!-- Левая часть: круглая фотография здания -->
+                    <div class="location-photo">
+                        <div class="location-photo-circle">
+                            <img src="img/thomas_wolf_foto.webp"
+                                 alt="Дом молитвы Gemeinde Jesus lebt">
+                        </div>
+                    </div>
+
+                    <!-- Правая часть: текст и кнопка -->
+                    <div class="location-content">
+                        <div class="location-pin">
+                            <!-- Можно заменить на свою иконку SVG -->
+                            <span class="location-pin-icon">
+                                <img src="img/location_on.svg"
+                                 alt="location">
+                                </span>
+                        </div>
+
+                        <h2 class="location-title" data-i18n="location.title">
+                            Наш дом молитвы
+                        </h2>
+
+                        <p class="location-lead" data-i18n="location.lead">
+                            Цель жизни нашей общины заключается в том, чтобы явить Славу и Величие Премудрого Бога,
+                            Который открывает Себя нам в Библии.
+                        </p>
+
+                        <p class="location-address" data-i18n="location.address">
+                            Kirchstraße 5, 86316 Friedberg<br>
+                            Bayern
+                        </p>
+
+                        <a href="https://maps.app.goo.gl/TnVzL5QNDT4HSiit9"
+                           class="btn btn-primary location-btn"
+                           target="_blank"
+                           rel="noopener"
+                           data-i18n="location.button"
+                           id="contact">
+                            Мы на карте
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </main>

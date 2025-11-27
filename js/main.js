@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupLanguageSwitcher(initialLang);
     setupCarousel();
     setupMobileMenu();
+    setupLocationAnimation();
 });
 
 // ---------- КАРУСЕЛЬ ----------
