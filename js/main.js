@@ -100,6 +100,7 @@ function setupCarousel() {
 function setupMobileMenu() {
     const nav = document.querySelector(".main-nav");
     const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = nav ? nav.querySelectorAll(".nav-link") : [];
 
     if (!nav || !navToggle) return;
 
@@ -114,7 +115,6 @@ function setupMobileMenu() {
         const isOpen = nav.classList.toggle("is-open");
         navToggle.setAttribute("aria-expanded", String(isOpen));
     });
-
     
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
