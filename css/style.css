@@ -1,5 +1,4 @@
 /* ===== БАЗА ===== */
-
 *,
 *::before,
 *::after {
@@ -44,7 +43,6 @@ ul {
 }
 
 /* ===== HERO / КАРУСЕЛЬ ===== */
-
 .site-header {
     position: relative;
 }
@@ -103,7 +101,6 @@ ul {
 }
 
 /* ===== НАВИГАЦИЯ ===== */
-
 .main-nav {
     display: flex;
     align-items: center;
@@ -181,7 +178,7 @@ ul {
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.6);
     background: rgba(0, 0, 0, 0.35);
-    display: none; /* desktop: скрыто */
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -196,7 +193,6 @@ ul {
 }
 
 /* ===== ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА ===== */
-
 .lang-switcher {
     position: absolute;
     right: 1.5rem;
@@ -262,7 +258,6 @@ ul {
 
 
 /* ===== ТЕКСТ СТИХА / АНИМАЦИЯ ===== */
-
 .hero-text {
     margin: 0 auto;
     max-width: 46rem;
@@ -319,7 +314,6 @@ ul {
 }
 
 /* ===== ТОЧКИ-СЛАЙДЕР ===== */
-
 .hero-dots {
     position: absolute;
     left: 1.1rem;
@@ -346,7 +340,6 @@ ul {
 }
 
 /* ===== БЛОК "НОВОСТИ И СОБЫТИЯ" ===== */
-
 .section-news {
     background-color: #f7f1e7;
     padding: 3rem 0 4rem;
@@ -377,7 +370,6 @@ ul {
 }
 
 /* ===== АДАПТИВ (mobile-first) ===== */
-
 /* Планшеты и телефоны: используем бургер-меню */
 @media (max-width: 1024px) {
     .main-nav {
@@ -418,7 +410,7 @@ ul {
     }
 
     .nav-toggle {
-        display: flex; /* показываем бургер на планшете и телефоне */
+        display: flex;
     }
 
     /* Переключатель языка рядом с бургером,
@@ -456,8 +448,6 @@ ul {
         right: 0.9rem;
     }
 
-    /* На очень узком экране можно чуть опустить переключатель языка,
-       если он конфликтует с бургером */
     .lang-switcher {
         top: 3.3rem;
         right: 1rem;
@@ -486,7 +476,6 @@ ul {
 }
 
 /* ===== СЕКЦИЯ "НАШ ДОМ МОЛИТВЫ / АДРЕС" ===== */
-
 .section-location {
     /* padding: 4rem 0; */
     position: relative;
@@ -500,7 +489,7 @@ ul {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow: hidden; /* чтобы overlay не вылезал наружу */
+    overflow: hidden;
 }
 
 /* Белый полупрозрачный слой поверх фона */
@@ -509,7 +498,7 @@ ul {
     position: absolute;
     inset: 0; /* то же самое, что top:0; right:0; bottom:0; left:0; */
     background: rgba(255, 255, 255, 0.35); /* степень «затемнения»/осветления */
-    pointer-events: none; /* чтобы не мешал кликам */
+    pointer-events: none;
 }
 
 /* Белая карточка в центре */
@@ -522,7 +511,7 @@ ul {
     flex-direction: column;
     gap: 2rem;
     position: relative;
-    z-index: 1;          /* ← важная строка */
+    z-index: 1;
 }
 
 /* ===== АНИМАЦИЯ ПОЯВЛЕНИЯ БЛОКА АДРЕСА ПРИ СКРОЛЛЕ ===== */
@@ -623,7 +612,7 @@ ul {
     font-size: 0.95rem;
     font-weight: 600;
     color: #8a6235;
-    white-space: pre-line; /* ← ВАЖНО: переносы \n становятся реальными */
+    white-space: pre-line;
 }
 
 /* Кнопка "Мы на карте" */
@@ -643,7 +632,7 @@ ul {
 }
 
 .btn-primary {
-    background-color: #A23B3B; /* зелёный, как на примере */
+    background-color: #A23B3B;
     color: #ffffff;
 }
 
@@ -653,7 +642,6 @@ ul {
 }
 
 /* ===== АДАПТИВ ДЛЯ СЕКЦИИ АДРЕСА ===== */
-
 /* Десктоп: картинка слева, текст справа */
 @media (min-width: 900px) {
     .location-card {
@@ -704,3 +692,78 @@ ul {
 
 }
 
+/* ===== ФУТЕР ===== */
+.site-footer {
+    background-color: #f7f1e7;
+    padding: 2.5rem 0;
+    text-align: center;
+    /* margin-top: 3rem; */
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    align-items: center;
+}
+
+/* Логотип и текст */
+.footer-logo-img{
+    width: 25px;
+}
+
+.footer-logo {
+    height: 55px;
+    filter: brightness(0) invert(0.15);
+    margin-bottom: 0.5rem;
+}
+
+.footer-title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.footer-subtitle {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin: 0;
+}
+
+/* Копирайт */
+.footer-info {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Соцсети */
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-social-link {
+    font-size: 0.85rem;
+    color: #8a6235;
+    font-weight: 600;
+}
+
+.footer-social-link:hover {
+    text-decoration: underline;
+}
+
+.footer-logo-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (min-width: 900px) {
+    .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+}
