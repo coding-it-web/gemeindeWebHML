@@ -525,6 +525,32 @@ ul {
     z-index: 1;          /* ← важная строка */
 }
 
+/* ===== АНИМАЦИЯ ПОЯВЛЕНИЯ БЛОКА АДРЕСА ПРИ СКРОЛЛЕ ===== */
+
+/* Начальное состояние: блоки немного ниже и прозрачные */
+.location-photo,
+.location-content {
+    opacity: 0;
+    transform: translateY(40px); /* фото и текст чуть ниже своего места */
+    transition:
+        transform 0.9s ease-out,
+        opacity 0.9s ease-out;
+}
+
+/* Когда секция попала в область видимости, добавляем класс .is-visible */
+.section-location-bg.is-visible .location-photo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Текст идёт с небольшой задержкой и более коротким смещением */
+.section-location-bg.is-visible .location-content {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.15s; /* легкая задержка относительно фото */
+}
+
+
 /* Левая часть: круглая фотография */
 .location-photo {
     display: flex;

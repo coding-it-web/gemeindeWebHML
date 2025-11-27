@@ -205,3 +205,34 @@ function setupLanguageSwitcher(initialLang) {
         }
     });
 }
+
+// ---------- АНИМАЦИЯ СЕКЦИИ "НАШ ДОМ МОЛИТВЫ" ПРИ СКРОЛЛЕ ----------
+
+function setupLocationAnimation() {
+    const sectionBg = document.querySelector(".section-location-bg");
+    if (!sectionBg) return;
+
+    // Если IntersectionObserver не поддерживается (очень старые браузеры),
+    // просто сразу показываем блок без анимации.
+    if (!("IntersectionObserver" in window)) {
+        sectionBg.classList.add("is-visible");
+        return;
+    }
+
+    const observer = new IntersectionObserver(
+        (entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    sectionBg.classList.add("is-visible");
+                    obs.unobserve(entry.target); // анимация только один раз
+                }
+            });
+        },
+        {
+            threshold: 0.3 // 30% блока в зоне видимости – запускаем анимацию
+        }
+    );
+
+    observer.observe(sectionBg);
+}
+
