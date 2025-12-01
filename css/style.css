@@ -152,9 +152,9 @@ ul {
 }
 
 .nav-logo-img {
-    height: 48px;
+    height: 55px;
     margin-bottom: 0.35rem;
-    filter: brightness(0) invert(1);
+    /* filter: brightness(0) invert(1); */
 }
 
 .nav-logo-text {
@@ -709,7 +709,7 @@ ul {
 
 /* Логотип и текст */
 .footer-logo-img{
-    width: 25px;
+    width: 65px;
 }
 
 .footer-logo {
