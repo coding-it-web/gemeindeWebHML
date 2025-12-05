@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Авто запуск popup</title>
+    <script>
+        window.addEventListener('load', function () {
+            // Открываем всплывающее окно
+            const popup = window.open(
+                "popup.html",
+                "popupWindow",
+                "width=500,height=600,resizable=yes"
+            );
+
+            // Если всплывающее окно заблокировано
+            if (!popup) {
+                alert("Браузер заблокировал всплывающее окно.\n" +
+                      "Разреши всплывающие окна для этой страницы.");
+                return;
+            }
+
+            // Небольшая задержка и попытка закрыть index.html
+            setTimeout(function () {
+                try {
+                    window.close();
+                } catch (e) {
+                    // Ничего не делаем, просто тихо игнорируем
+                    console.log("Нельзя закрыть это окно автоматически:", e);
+                }
+            }, 300);
+        });
+    </script>
+</head>
+<body>
+    <p>Окно должно автоматически открыть всплывающее окно и попытаться закрыться.</p>
+</body>
+</html>

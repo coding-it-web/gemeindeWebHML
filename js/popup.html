@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Текстовое окно</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            flex: 1;
+            width: 100%;
+            resize: none;
+            font-size: 16px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .button-row {
+            width: 100%;
+            display: flex;
+            margin-top: 10px;
+            gap: 10px; /* расстояние между кнопками */
+        }
+
+        .btn {
+            flex: 1; /* каждая занимает половину */
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #status {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #008000;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="textArea" placeholder="Введите текст здесь..."></textarea>
+
+    <div class="button-row">
+        <button class="btn" onclick="copyToClipboard()">Скопировать</button>
+        <button class="btn" onclick="clearText()">Очистить</button>
+    </div>
+
+    <div id="status"></div>
+
+    <script>
+        function copyToClipboard() {
+            const textarea = document.getElementById('textArea');
+            const status = document.getElementById('status');
+            const text = textarea.value;
+
+            if (!text) {
+                status.style.color = 'red';
+                status.textContent = 'Нет текста для копирования.';
+                return;
+            }
+
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(text)
+                    .then(() => {
+                        status.style.color = 'green';
+                        status.textContent = 'Текст скопирован.';
+                    })
+                    .catch(() => fallbackCopy());
+            } else {
+                fallbackCopy();
+            }
+
+            function fallbackCopy() {
+                textarea.select();
+                try {
+                    document.execCommand('copy');
+                    status.style.color = 'green';
+                    status.textContent = 'Текст скопирован.';
+                } catch (e) {
+                    status.style.color = 'red';
+                    status.textContent = 'Ошибка при копировании.';
+                }
+                window.getSelection().removeAllRanges();
+            }
+        }
+
+        function clearText() {
+            const textarea = document.getElementById('textArea');
+            const status = document.getElementById('status');
+
+            textarea.value = "";
+            status.style.color = 'black';
+            status.textContent = 'Поле очищено.';
+        }
+    </script>
+</body>
+</html>
