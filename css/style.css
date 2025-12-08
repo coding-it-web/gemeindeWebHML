@@ -369,6 +369,118 @@ ul {
     font-size: 0.95rem;
 }
 
+/* Список новостей: дата + текст */
+.news-list {
+    max-width: 40rem;
+    margin: 2rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Одна новость */
+.news-item {
+    padding: 0.75rem 0;
+    border-top: 1px solid rgba(153, 108, 61, 0.25);
+}
+
+/* Дата новости */
+.news-date {
+    margin: 0 0 0.3rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #996c3d;
+}
+
+/* Текст новости */
+.news-text {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333333;
+}
+
+/* Чуть плотнее на очень узких экранах */
+@media (max-width: 600px) {
+    .news-list {
+        margin-top: 1.5rem;
+    }
+
+    .news-item {
+        padding: 0.6rem 0;
+    }
+
+    .news-date {
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+    }
+
+    .news-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== БЛОК "РАСПИСАНИЕ БОГОСЛУЖЕНИЙ" ===== */
+.section-schedule {
+    background-color: #ffffff; /* тот же мягкий фон, что и у новостей #f7f1e7;*/
+    padding: 3rem 0 3.5rem;
+}
+
+.schedule-inner {
+    max-width: 40rem;
+    margin: 2rem auto 0;
+}
+
+.schedule-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.schedule-item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Время/день — более заметно, сам текст — помягче */
+.schedule-time {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #333333;
+}
+
+.schedule-desc {
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+/* Небольшая примечание под списком */
+.schedule-note {
+    margin-top: 4.5rem;
+    font-size: 0.85rem;
+    color: #777777;
+    text-align: center;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Чуть аккуратнее на широких экранах — строка в одну линию */
+@media (min-width: 768px) {
+    .schedule-item {
+        flex-direction: row;
+        gap: 1.5rem;
+        align-items: baseline;
+    }
+
+    .schedule-time {
+        min-width: 13rem;
+    }
+}
+
 /* ===== АДАПТИВ (mobile-first) ===== */
 /* Планшеты и телефоны: используем бургер-меню */
 @media (max-width: 1024px) {
@@ -444,7 +556,7 @@ ul {
     }
 
     .hero-dots {
-        left: auto;
+        /* left: auto; */
         right: 0.9rem;
     }
 
@@ -525,6 +637,20 @@ ul {
         transform 0.9s ease-out,
         opacity 0.9s ease-out;
 }
+
+.location-phone,
+.location-mail {
+    display: inline-flex;        /* иконка и текст в одной строке */
+    align-items: center;         /* вертикальное центрирование */
+    gap: 0.4rem;                 /* небольшой отступ между иконкой и номером */
+    margin-bottom: 15px;          /* отступ после блока, как ты просил */
+    white-space: nowrap;         /* держим номер и иконку в одной строке */
+}
+
+.location-phone .phone {
+    display: block;              /* убирает лишние «скачки» по базовой линии */
+}
+
 
 /* Когда секция попала в область видимости, добавляем класс .is-visible */
 .section-location-bg.is-visible .location-photo {

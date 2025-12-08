@@ -34,21 +34,22 @@
         <nav class="main-nav" aria-label="Hauptnavigation">
                     <ul class="nav-links nav-left">
                         <li><a href="index.html" class="nav-link is-active" data-i18n="nav.home">Startseite</a></li>
-                        <li><a href="#" class="nav-link" data-i18n="nav.about">Über die Gemeinde</a></li>
-                        <li><a href="#" class="nav-link" data-i18n="nav.news">Nachrichten</a></li>
-                        <li><a href="#" class="nav-link" data-i18n="nav.services">Dienste</a></li>
+                        <li><a href="#" class="nav-link" data-i18n="nav.about">Über uns</a></li>
+                        <li><a href="#nachrichten" class="nav-link" data-i18n="nav.news">Nachrichten</a></li>
+                        
                     </ul>
 
                     <a href="index.html" class="nav-logo" aria-label="Gemeinde Jesus lebt">
-                        <img src="img/logo.gif" alt="Gemeindelogo" class="nav-logo-img">
+                        <img src="img/logo.webp" alt="Gemeindelogo" class="nav-logo-img">
                         <span class="nav-logo-text" data-i18n="logo.title">Gemeinde Jesus lebt</span>
                         <span class="nav-logo-subtitle" data-i18n="logo.subtitle">Freievangelische Gemeinde</span>
                     </a>
 
                     <ul class="nav-links nav-right">
-                        <li><a href="#" class="nav-link" data-i18n="nav.calendar">Kalender</a></li>
-                        <li><a href="#" class="nav-link" data-i18n="nav.video">Videoblog</a></li>
-                        <li><a href="#" class="nav-link" data-i18n="nav.blog">Blog</a></li>
+                        <!-- <li><a href="#" class="nav-link" data-i18n="nav.calendar">Kalender</a></li> -->
+                        <!-- <li><a href="#" class="nav-link" data-i18n="nav.video">Videoblog</a></li> -->
+                        <!-- <li><a href="#" class="nav-link" data-i18n="nav.blog">Blog</a></li> -->
+                        <li><a href="#dienste" class="nav-link" data-i18n="nav.services">Dienste</a></li>
                         <li><a href="#contact" class="nav-link" data-i18n="nav.contacts">Kontakt</a></li>
                     </ul>
 
@@ -176,7 +177,7 @@
                 <div class="hero-nav-placeholder"></div>
 
                 <div class="hero-text">
-                    <h1 class="hero-title" data-i18n="hero.title3">Lebendiger Glaube — lebendige Gemeinschaft</h1>
+                    <h1 class="hero-title" data-i18n="hero.title3">Lebendige Gemeinschaft</h1>
                     <p class="hero-verse" data-i18n="hero.verse3">
                         «Und lasst uns aufeinander Acht geben, damit wir uns gegenseitig anspornen zur Liebe und zu guten Werken»
                     </p>
@@ -190,20 +191,60 @@
 </header>
 
 <main>
-    <!-- Следующий блок после скролла вниз — Новости и события -->
-    <section id="news" class="section section-news">
+    <!-- Новости и события -->
+    <section class="section section-news" id="nachrichten">
         <div class="container">
             <p class="section-kicker" data-i18n="news.kicker">Unser Leben
             </p>
             <h2 class="section-title" data-i18n="news.title">Neuigkeiten und Ereignisse</h2>
 
-            <!-- Пока заглушка. Позже тут будут карточки новостей. -->
-            <p class="section-placeholder">
-                Здесь будут отображаться актуальные новости, объявления и события церкви.
-            </p> <!-- TODO -->
+            <!-- Список новостей (позже будет заполняться с бэкенда) -->
+            <div class="news-list" id="news-list">
+                <article class="news-item">
+                    <p class="news-date">14.12.2025</p>
+                    <p class="news-text" data-i18n="news.text.14.12.2025">
+                        Die Kirche "Zion" hat die Familie Wolf für einen eigenen Dienst gesegnet.
+                    </p>
+                </article>
+            </div>
         </div>
     </section>
-        <!-- БЛОК "НАШ ДОМ МОЛИТВЫ / АДРЕС" -->
+
+    <!-- БЛОК "РАСПИСАНИЕ БОГОСЛУЖЕНИЙ" -->
+    <section id="dienste" class="section section-schedule">
+        <div class="container">
+
+            <p class="section-kicker" data-i18n="schedule.kicker">
+                Gottesdienste
+            </p>
+
+            <h2 class="section-title" data-i18n="schedule.title">
+                 Wir treffen uns:
+            </h2>
+
+            <div class="schedule-inner">
+                <ul class="schedule-list">
+                    <li class="schedule-item">
+                        <span class="schedule-time" data-i18n="schedule.sunday.time">
+                            Sonntag, 11:00-13:00
+                        </span>
+                    </li>
+
+                    <li class="schedule-item">
+                        <span class="schedule-time" data-i18n="schedule.wed.time">
+                            Mittwoch, 19:00-20:30
+                        </span>
+                    </li>
+                </ul>
+
+                <p class="schedule-note" data-i18n="schedule.note">
+                    An Feiertagen und für besondere Veranstaltungen kann die Zeit abweichen – haltet euch auf der Website auf dem Laufenden.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК "НАШ ДОМ МОЛИТВЫ / АДРЕС" -->
     <section id="location" class="section section-location">
         <div class="section-location-bg">
             <div class="container">
@@ -227,16 +268,21 @@
                         </div>
 
                         <h2 class="location-title" data-i18n="location.title">
-                            Наш дом молитвы
+                            Kontakt und Adresse
                         </h2>
 
-                        <p class="location-lead" data-i18n="location.lead">
-                            Цель жизни нашей общины заключается в том, чтобы явить Славу и Величие Премудрого Бога,
-                            Который открывает Себя нам в Библии.
-                        </p>
+                        <div class="location-phone">
+                            <img src="img/phone_in.svg" class="phone" alt="Telefon">
+                            <span>0171 829 67 67</span>
+                        </div>
+                        <div class="location-mail">
+                            <img src="img/mail.svg" class="phone" alt="Telefon">
+                            <span>example@mail.com</span>
+                        </div>
+
 
                         <p class="location-address" data-i18n="location.address">
-                            Kirchstraße 5, 86316 Friedberg<br>
+                            Kirchstraße 5, <br>86316 Friedberg
                             Bayern
                         </p>
 
@@ -246,7 +292,7 @@
                            rel="noopener"
                            data-i18n="location.button"
                            id="contact">
-                            Мы на карте
+                            Wir sind auf der Karte
                         </a>
                     </div>
                 </div>
@@ -258,7 +304,7 @@
     <div class="container footer-inner">
 
         <div class="footer-logo-block">
-            <img src="img/logo.gif" alt="Gemeinde Jesus lebt" class="footer-logo-img">
+            <img src="img/logo.webp" alt="Gemeinde Jesus lebt" class="footer-logo-img">
             <p class="footer-title">Gemeinde Jesus lebt</p>
             <p class="footer-subtitle">Freievangelische Gemeinde</p>
         </div>
