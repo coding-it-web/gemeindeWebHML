@@ -32,7 +32,7 @@ const i18n = {
         "location.title": "Adresse und Kontakte",
         "location.lead": "Das Ziel unserer Gemeinschaft ist es, die Herrlichkeit und Größe des weisen Gottes zu zeigen, der sich uns in der Bibel offenbart.",
         "location.address": "Kirchstraße 5, \n86316 Friedberg Bayern",
-        "location.button": "Wir sind auf der Karte",
+        "location.button": "Auf der Karte",
 
         "news.text.14.12.2025": "Die Kirche 'Zion' hat die Familie Wolf für einen eigenen Dienst gesegnet.",
 
@@ -74,7 +74,7 @@ const i18n = {
         "location.title": "Адрес и контакты",
         "location.lead": "Цель жизни нашей общины заключается в том, чтобы явить Славу и Величие Премудрого Бога, Который открывает Себя нам в Библии.",
         "location.address": "Kirchstraße 5, \n86316 Friedberg Bayern",
-        "location.button": "Мы на карте",
+        "location.button": "Показать на карте",
 
         "news.text.14.12.2025": "Церковь 'Цион' благословила семью Wolf на отдельное служение.",
 
