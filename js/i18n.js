@@ -39,7 +39,9 @@ const i18n = {
         "schedule.kicker": "Gottesdienste",
         "schedule.title": "Wir treffen uns:",
         "schedule.sunday.time": "Sonntag, 11:00-13:00",
+        "schedule.sunday.desc":"Hauptgottesdienst",
         "schedule.wed.time": "Mittwoch, 19:00-20:30",
+        "schedule.wed.desc": "Gebet und Anbetung",
         "schedule.note": "An Feiertagen und für besondere Veranstaltungen kann die Zeit abweichen – haltet euch auf der Website auf dem Laufenden."
     },
     ru: {
@@ -81,7 +83,9 @@ const i18n = {
         "schedule.kicker": "Богослужения",
         "schedule.title": "Мы встречаемся:",
         "schedule.sunday.time": "Воскресенье, 11:00-13:00",
+        "schedule.sunday.desc":"Главное богослужение",
         "schedule.wed.time": "Среда, 19:00-20:30",
+        "schedule.wed.desc": "Молитвенное собрание",
         "schedule.note": "В праздничные дни и для особых мероприятий время может отличаться — следите за новостями на сайте."
 
     }

@@ -380,7 +380,7 @@ ul {
 
 /* Список новостей: дата + текст */
 .news-list {
-    max-width: 40rem;
+    max-width: 50rem;
     margin: 2rem auto 0;
     display: flex;
     flex-direction: column;
@@ -391,6 +391,9 @@ ul {
 .news-item {
     padding: 0.75rem 0;
     border-top: 1px solid rgba(153, 108, 61, 0.25);
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
 }
 
 /* Дата новости */
@@ -409,6 +412,31 @@ ul {
     color: #333333;
 }
 
+.news-media {
+    width: 190px;
+    height: 95px;
+    flex: 0 0 190px;
+    border: 1px solid rgba(153, 108, 61, 0.35);
+    border-radius: 6px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.news-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.news-content {
+    flex: 1;
+}
+
+
 /* Чуть плотнее на очень узких экранах */
 @media (max-width: 600px) {
     .news-list {
@@ -417,6 +445,17 @@ ul {
 
     .news-item {
         padding: 0.6rem 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .news-media {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        aspect-ratio: 190 / 95;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .news-date {
