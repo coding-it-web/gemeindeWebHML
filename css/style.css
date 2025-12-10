@@ -108,7 +108,7 @@ ul {
     gap: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     position: relative;
     z-index: 3;
 }
@@ -357,8 +357,8 @@ ul {
 .section-kicker {
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    /* font-size: 0.75rem; */
     margin: 0 0 0.75rem;
     color: #996c3d;
 }
