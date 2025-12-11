@@ -42,7 +42,7 @@ const i18n = {
         "schedule.sunday.desc":"Hauptgottesdienst",
         "schedule.wed.time": "Mittwoch, 19:00-20:30",
         "schedule.wed.desc": "Gebet und Anbetung",
-        "schedule.note": "An Feiertagen und für besondere Veranstaltungen kann die Zeit abweichen – haltet euch auf der Website auf dem Laufenden."
+        "schedule.note": "„Ich freute mich, als man mir sagte: Lasst uns zum Haus des HERRN gehen!“ \n(Psalm 122,1)\n\nOb am Sonntag oder am Mittwoch – wir kommen zusammen, um Jesus zu begegnen, Ihn anzubeten und neue Kraft zu empfangen. In einer Atmosphäre von Freude, Dank und Gemeinschaft erleben wir, wie Gott Herzen berührt und Leben verändert."
     },
     ru: {
         "nav.home": "Главная",
