@@ -35,6 +35,7 @@ const i18n = {
         "location.button": "Auf der Karte",
 
         "news.text.14.12.2025": "Die Kirche 'Zion' hat die Familie Wolf für einen eigenen Dienst gesegnet.",
+        "news.text.04_01_2026": "Unser erster Gottesdienst findet am 04.01.2026 statt.",
 
         "schedule.kicker": "Gottesdienste",
         "schedule.title": "Wir treffen uns:",
@@ -79,6 +80,7 @@ const i18n = {
         "location.button": "Показать на карте",
 
         "news.text.14.12.2025": "Церковь 'Цион' благословила семью Wolf на отдельное служение.",
+        "news.text.04_01_2026": "Наше первое Богослужение состоится 04.01.2026.",
 
         "schedule.kicker": "Богослужения",
         "schedule.title": "Мы встречаемся:",
